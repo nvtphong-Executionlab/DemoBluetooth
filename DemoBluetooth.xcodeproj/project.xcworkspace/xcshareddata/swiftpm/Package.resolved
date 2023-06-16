@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "l2cap",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/paulw11/L2Cap.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "ff9e793543cb53f4f9c8bdac66f48c5d9b1197ae"
+      }
+    }
+  ],
+  "version" : 2
+}

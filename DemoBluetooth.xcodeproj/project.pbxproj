@@ -14,6 +14,11 @@
 		42CDE4CF2A3AB121009AFEFA /* DemoBluetoothTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDE4CE2A3AB121009AFEFA /* DemoBluetoothTests.swift */; };
 		42CDE4D92A3AB121009AFEFA /* DemoBluetoothUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDE4D82A3AB121009AFEFA /* DemoBluetoothUITests.swift */; };
 		42CDE4DB2A3AB121009AFEFA /* DemoBluetoothUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDE4DA2A3AB121009AFEFA /* DemoBluetoothUITestsLaunchTests.swift */; };
+		42CDE4E82A3AB167009AFEFA /* CentralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDE4E72A3AB167009AFEFA /* CentralViewController.swift */; };
+		42CDE4ED2A3AB55E009AFEFA /* PeripheralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDE4EC2A3AB55E009AFEFA /* PeripheralViewController.swift */; };
+		42CDE4F12A3AB996009AFEFA /* CentralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDE4F02A3AB996009AFEFA /* CentralView.swift */; };
+		42CDE4F32A3AB9A2009AFEFA /* PeripheralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CDE4F22A3AB9A2009AFEFA /* PeripheralView.swift */; };
+		42CDE4F62A3ACCE2009AFEFA /* L2Cap in Frameworks */ = {isa = PBXBuildFile; productRef = 42CDE4F52A3ACCE2009AFEFA /* L2Cap */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,11 @@
 		42CDE4D42A3AB121009AFEFA /* DemoBluetoothUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoBluetoothUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42CDE4D82A3AB121009AFEFA /* DemoBluetoothUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoBluetoothUITests.swift; sourceTree = "<group>"; };
 		42CDE4DA2A3AB121009AFEFA /* DemoBluetoothUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoBluetoothUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		42CDE4E72A3AB167009AFEFA /* CentralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralViewController.swift; sourceTree = "<group>"; };
+		42CDE4EC2A3AB55E009AFEFA /* PeripheralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralViewController.swift; sourceTree = "<group>"; };
+		42CDE4F02A3AB996009AFEFA /* CentralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CentralView.swift; sourceTree = "<group>"; };
+		42CDE4F22A3AB9A2009AFEFA /* PeripheralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralView.swift; sourceTree = "<group>"; };
+		42CDE4F72A3AE9A5009AFEFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42CDE4F62A3ACCE2009AFEFA /* L2Cap in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +106,9 @@
 		42CDE4BB2A3AB120009AFEFA /* DemoBluetooth */ = {
 			isa = PBXGroup;
 			children = (
+				42CDE4F72A3AE9A5009AFEFA /* Info.plist */,
+				42CDE4EF2A3AB97C009AFEFA /* Views */,
+				42CDE4EE2A3AB967009AFEFA /* BluetoothController */,
 				42CDE4BC2A3AB120009AFEFA /* DemoBluetoothApp.swift */,
 				42CDE4BE2A3AB120009AFEFA /* ContentView.swift */,
 				42CDE4C02A3AB121009AFEFA /* Assets.xcassets */,
@@ -129,6 +143,24 @@
 			path = DemoBluetoothUITests;
 			sourceTree = "<group>";
 		};
+		42CDE4EE2A3AB967009AFEFA /* BluetoothController */ = {
+			isa = PBXGroup;
+			children = (
+				42CDE4E72A3AB167009AFEFA /* CentralViewController.swift */,
+				42CDE4EC2A3AB55E009AFEFA /* PeripheralViewController.swift */,
+			);
+			path = BluetoothController;
+			sourceTree = "<group>";
+		};
+		42CDE4EF2A3AB97C009AFEFA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				42CDE4F02A3AB996009AFEFA /* CentralView.swift */,
+				42CDE4F22A3AB9A2009AFEFA /* PeripheralView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,6 +177,9 @@
 			dependencies = (
 			);
 			name = DemoBluetooth;
+			packageProductDependencies = (
+				42CDE4F52A3ACCE2009AFEFA /* L2Cap */,
+			);
 			productName = DemoBluetooth;
 			productReference = 42CDE4B92A3AB120009AFEFA /* DemoBluetooth.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +252,9 @@
 				Base,
 			);
 			mainGroup = 42CDE4B02A3AB120009AFEFA;
+			packageReferences = (
+				42CDE4F42A3ACCE2009AFEFA /* XCRemoteSwiftPackageReference "L2Cap" */,
+			);
 			productRefGroup = 42CDE4BA2A3AB120009AFEFA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,7 +297,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42CDE4ED2A3AB55E009AFEFA /* PeripheralViewController.swift in Sources */,
 				42CDE4BF2A3AB120009AFEFA /* ContentView.swift in Sources */,
+				42CDE4F32A3AB9A2009AFEFA /* PeripheralView.swift in Sources */,
+				42CDE4F12A3AB996009AFEFA /* CentralView.swift in Sources */,
+				42CDE4E82A3AB167009AFEFA /* CentralViewController.swift in Sources */,
 				42CDE4BD2A3AB120009AFEFA /* DemoBluetoothApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +454,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DemoBluetooth/DemoBluetooth.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DemoBluetooth/Preview Content\"";
@@ -419,6 +462,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DemoBluetooth/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Allow bluetooth";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -450,6 +495,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DemoBluetooth/DemoBluetooth.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DemoBluetooth/Preview Content\"";
@@ -457,6 +503,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DemoBluetooth/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Allow bluetooth";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -612,6 +660,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		42CDE4F42A3ACCE2009AFEFA /* XCRemoteSwiftPackageReference "L2Cap" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/paulw11/L2Cap.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		42CDE4F52A3ACCE2009AFEFA /* L2Cap */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 42CDE4F42A3ACCE2009AFEFA /* XCRemoteSwiftPackageReference "L2Cap" */;
+			productName = L2Cap;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 42CDE4B12A3AB120009AFEFA /* Project object */;
 }
